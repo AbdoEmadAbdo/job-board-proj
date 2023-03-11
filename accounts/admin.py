@@ -1,5 +1,8 @@
 from django.contrib import admin
 
-from .models import Accounts
+# Register your models here.
+from .models import Profile , City
 
-admin.site.register(Accounts)
+
+admin.site.register(Profile)
+admin.site.register(City)
