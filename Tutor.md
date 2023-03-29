@@ -24,5 +24,5 @@ Relations :
 
 
 
-static files : [frontend] images , css , javascript 
-media files : [upload] images
+static files : [frontend] images , css , javascript       for The Project
+media files :  [upload] images                             For the Users

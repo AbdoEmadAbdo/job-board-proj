@@ -9,3 +9,5 @@ Pillow==7.1.2
 pytz==2020.1
 soupsieve==2.0.1
 sqlparse==0.3.1
+
+asgiref django-bootstrap4 django-filter djangorestframework Markdown Pillow pytz soupsieve sqlparse

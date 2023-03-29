@@ -5,7 +5,7 @@ from .form import ApplyForm , JobForm
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from .filters import JobFilter
-# Create your views here.
+
 
 def job_list(request):
     job_list = Job.objects.all()
@@ -20,6 +20,8 @@ def job_list(request):
     page_obj = paginator.get_page(page_number)
 
 
+#    of any Context
+#?      {name_Template : name_view}            
     context = {'jobs' :page_obj , 'myfilter' : myfilter} # template name
     return render(request,'job/job_list.html',context)
 
