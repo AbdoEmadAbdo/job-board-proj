@@ -8,7 +8,7 @@ from .filters import JobFilter
 
 
 def job_list(request):
-    job_list = Job.objects.all()
+    job_list = Job.objects.all()  # its queryset    see   queryset  in the Documentation
 
     ## filters
     myfilter = JobFilter(request.GET,queryset=job_list)
@@ -17,16 +17,19 @@ def job_list(request):
 
     paginator = Paginator(job_list, 3) # Show 25 contacts per page.
     page_number = request.GET.get('page')
+    
     page_obj = paginator.get_page(page_number)
 
 
 #    of any Context
-#?      {name_Template : name_view}            
-    context = {'jobs' :page_obj , 'myfilter' : myfilter} # template name
-    return render(request,'job/job_list.html',context)
+#? {{context_name in Template_file} : name in view_function}            
+    context = {'jobs' :page_obj , 'myfilter' : myfilter} # its name in template file
+
+ #                           html file template   
+    return render(request,'job/job_list.html',context)       # then go adjast the template_html file job_list.html   add the Context
 
 
-
+#                      , int
 def job_detail(request , slug):
     job_detail = Job.objects.get(slug=slug)
 

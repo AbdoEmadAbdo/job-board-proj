@@ -1,4 +1,4 @@
- - frontend template
+ - frontend template download
  - virtualenv : 
     - create 
     - activate [windowds : source ./scripts/activate]
@@ -19,7 +19,7 @@
 Relations : 
     - One to many    [ user - posts ]   Foreginkey
     - Many to many   [ user - groups ]  
-    - One to one  [ user - profile ]
+    - One to one     [ user - profile ]
 
 
 
